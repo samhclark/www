@@ -12,38 +12,46 @@
 }
 
 @font-face {
-    font-family: CooperHewitt;
+    font-family: "Cooper Hewitt";
     font-style: normal;
     font-weight: normal;
     font-stretch: normal;
-    src: url('fonts/CooperHewitt-Medium.woff2') format('woff2');
+    src: local('Cooper Hewitt'),
+        url('fonts/CooperHewitt-Medium.woff2') format('woff2'),
+        url('fonts/CooperHewitt-Medium.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
-    font-family: CooperHewitt;
+    font-family: "Cooper Hewitt";
     font-style: italic;
     font-weight: normal;
     font-stretch: normal;
-    src: url('fonts/CooperHewitt-MediumItalic.woff2') format('woff2');
+    src: local('Cooper Hewitt Italic'),
+        url('fonts/CooperHewitt-MediumItalic.woff2') format('woff2'),
+        url('fonts/CooperHewitt-MediumItalic.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
-    font-family: CooperHewitt;
+    font-family: "Cooper Hewitt";
     font-style: normal;
     font-weight: bold;
     font-stretch: normal;
-    src: url('fonts/CooperHewitt-Bold.woff2') format('woff2');
+    src: local('Cooper Hewitt Bold'),
+        url('fonts/CooperHewitt-Bold.woff2') format('woff2'),
+        url('fonts/CooperHewitt-Bold.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
-    font-family: CooperHewitt;
+    font-family: "Cooper Hewitt";
     font-style: italic;
     font-weight: bold;
     font-stretch: normal;
-    src: url('fonts/CooperHewitt-BoldItalic.woff2') format('woff2');
+    src: local('Cooper Hewitt Bold Italic'),
+        url('fonts/CooperHewitt-BoldItalic.woff2') format('woff2'),
+        url('fonts/CooperHewitt-BoldItalic.woff') format('woff');
     font-display: swap;
 }
 
@@ -52,7 +60,7 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
     background-color: var(--primary-light);
-    font-family: CooperHewitt, "Gill Sans", "Gill Sans MT", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Helvetica, Arial, sans-serif;
+    font-family: "Cooper Hewitt", "Gill Sans", "Gill Sans MT", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Helvetica, Arial, sans-serif;
 }
 
 @media screen and (prefers-color-scheme: dark) {
