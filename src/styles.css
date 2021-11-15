@@ -1,0 +1,196 @@
+:root {
+    --primary-light: #0970D7;
+    --secondary-light: #fcfcfc;
+    --text-light: #000000;
+    --visited-light: #804180;
+    --primary-dark: #1c1c1c;
+    --secondary-dark: #282828;
+    --text-dark: #ffffff;
+    --visited-dark: #a5a5a5;
+    --link: #3344dd;
+    --focus: #ffdd00;
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('fonts/CooperHewitt-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    font-style: italic;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('fonts/CooperHewitt-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('fonts/CooperHewitt-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('fonts/CooperHewitt-BoldItalic.woff2') format('woff2');
+}
+
+html, body {
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: var(--primary-light);
+    font-family: CooperHewitt, "Gill Sans", "Gill Sans MT", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Helvetica, Arial, sans-serif;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    html, body {
+        background-color: var(--primary-dark);
+    }
+}
+
+body {
+    display: grid;
+    place-items: center;
+
+}
+main {
+    display: block;
+    position: relative;
+    margin: 1rem;
+    padding: 1rem;
+    background: var(--secondary-light);
+    border-radius: 8px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.20);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    main {
+        background: var(--secondary-dark);
+    }
+}
+
+@media screen and (min-width: 400px) {
+    main {
+        width: 320px;
+    }
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.0rem;
+    margin: 1rem;
+    color: var(--text-light);
+}
+
+h2 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin: 1rem;
+    color: var(--text-light);
+}
+
+h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    margin: 1rem;
+    color: var(--text-light);
+}
+
+li, p, pre {
+    line-height: 1.25rem;
+    font-size: 1.0rem;
+    margin: 1rem;
+    color: var(--text-light);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    h1, h2, h3, li, p, pre {
+        color: var(--text-dark);
+    }
+}
+
+a {
+    outline: none;
+    text-decoration: underline;
+    color: var(--link);
+    padding: 2px 1px 0;
+}
+
+a:visited {
+    color: var(--visited-light);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    a {
+        color: var(--text-dark);
+    }
+
+    a:visited {
+        color: var(--visited-dark);
+    }
+}
+
+a:focus, a:hover {
+    font-weight: bold;
+    color: var(--text-light);
+    text-decoration: underline var(--text-light) solid 4px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    a:focus, a:hover {
+        color: var(--text-dark);
+        text-decoration: underline var(--text-dark) solid 4px;
+    }
+}
+
+a:focus:not(:focus-visible) {
+    font-weight: unset;
+    color: unset;
+    text-decoration: unset;
+}
+
+a:focus-visible {
+    font-weight: bold;
+    color: var(--text-light);
+    background-color: var(--focus);
+    outline: transparent solid 1px;
+    text-decoration: underline var(--text-light) solid 4px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    a:focus-visible {
+        color: var(--text-dark);
+        background-color: unset;
+        outline: var(--focus) solid 2px;
+    }
+}
+
+a[href*="http"]:after {
+    content: url(assets/external-link.svg);
+    display: inline-block;
+    margin-left: 0.2em;
+    width: 1em;
+    height: 1em;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    a[href*="http"]:after {
+        content: url(assets/external-link-white.svg);
+    }
+}
