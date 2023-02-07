@@ -1,11 +1,11 @@
 :root {
-    --primary-light: #0970D7;
-    --secondary-light: #fcfcfc;
-    --text-light: #000000;
+    --primary-light: #0e7ceb;
+    --secondary-light: #f5faff;
+    --text-light: #0F0F0F;
     --visited-light: #804180;
-    --primary-dark: #1c1c1c;
-    --secondary-dark: #282828;
-    --text-dark: #ffffff;
+    --primary-dark: #141517;
+    --secondary-dark: #292C30;
+    --text-dark: #f5f5f5;
     --visited-dark: #a5a5a5;
     --link: #3344dd;
     --focus: #ffdd00;
@@ -79,14 +79,14 @@ main {
     display: block;
     position: relative;
     margin: 1rem;
-    padding: 2rem;
+    padding: 3rem;
     background: var(--secondary-light);
     border-radius: 8px;
-    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.20);
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.20);
 }
 
 section {
-    padding: 0.5em 0;
+    padding: 1em 0;
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -102,14 +102,15 @@ section {
 }
 
 header {
-    margin-bottom: 2rem;
+    padding: 1rem 0;
 }
 
 h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 3.0rem;
-    margin: 1rem;
+    line-height: 1.2em;
+    margin: 0;
     color: var(--text-light);
 }
 
@@ -117,7 +118,8 @@ h2 {
     font-style: italic;
     font-weight: bold;
     font-size: 1.75rem;
-    margin: 1rem;
+    line-height: 1.2em;
+    margin: 0;
     color: var(--text-light);
 }
 
@@ -125,15 +127,29 @@ h3 {
     font-style: normal;
     font-weight: normal;
     font-size: 1.25rem;
-    margin: 1rem;
+    line-height: 1.4em;
+    margin: 0;
     color: var(--text-light);
 }
 
+ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
 li, p, pre {
-    line-height: 1.25rem;
+    line-height: 1.6em;
     font-size: 1.0rem;
-    margin: 1rem;
+    margin: 0;
     color: var(--text-light);
+}
+
+p, pre {
+    padding-left: 1em;
+}
+
+li {
+    list-style: none;
 }
 
 @media screen and (prefers-color-scheme: dark) {
