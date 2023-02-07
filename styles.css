@@ -74,14 +74,19 @@ body {
     place-items: center;
 
 }
+
 main {
     display: block;
     position: relative;
     margin: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     background: var(--secondary-light);
     border-radius: 8px;
     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.20);
+}
+
+section {
+    padding: 0.5em 0;
 }
 
 @media screen and (prefers-color-scheme: dark) {
