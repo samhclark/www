@@ -1,14 +1,26 @@
 :root {
-    --primary-light: #0e7ceb;
-    --secondary-light: #f5faff;
-    --text-light: #0F0F0F;
-    --visited-light: #804180;
-    --primary-dark: #141517;
-    --secondary-dark: #292C30;
-    --text-dark: #f5f5f5;
-    --visited-dark: #a5a5a5;
-    --link: #3344dd;
-    --focus: #ffdd00;
+    --gray-900: #000000;
+    --gray-800: #2A2A2A;
+    --gray-700: #5B5B5B;
+    --gray-600: #8B8B8B;
+    --gray-500: #B5B5B5;
+    --gray-400: #D6D6D6;
+    --gray-300: #EDEDED;
+    --gray-200: #FBFBFB;
+    --gray-100: #FFFFFF;
+
+    --primary-900: #07223C;
+    --primary-700: #104D87;
+    --primary-500: #1878D1;
+    --primary-300: #84BCF1;
+    --primary-100: #EDF5FD;
+
+    --background: var(--gray-100);
+    --text: var(--gray-900);    
+
+    --link: #3C48CD;
+    --visited: #911BB1;
+    --focus: #D16F19;
 }
 
 @font-face {
@@ -59,14 +71,9 @@ html, body {
     min-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
-    background-color: var(--primary-light);
+    color: var(--text);
+    background-color: var(--background);
     font-family: "Cooper Hewitt", "Gill Sans", "Gill Sans MT", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Helvetica, Arial, sans-serif;
-}
-
-@media screen and (prefers-color-scheme: dark) {
-    html, body {
-        background-color: var(--primary-dark);
-    }
 }
 
 body {
@@ -80,19 +87,10 @@ main {
     position: relative;
     margin: 1rem;
     padding: 3rem;
-    background: var(--secondary-light);
-    border-radius: 8px;
-    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.20);
 }
 
 section {
     padding: 1em 0;
-}
-
-@media screen and (prefers-color-scheme: dark) {
-    main {
-        background: var(--secondary-dark);
-    }
 }
 
 @media screen and (min-width: 400px) {
@@ -111,7 +109,6 @@ h1 {
     font-size: 3.0rem;
     line-height: 1.2em;
     margin: 0;
-    color: var(--text-light);
 }
 
 h2 {
@@ -120,7 +117,6 @@ h2 {
     font-size: 1.75rem;
     line-height: 1.2em;
     margin: 0;
-    color: var(--text-light);
 }
 
 h3 {
@@ -129,7 +125,6 @@ h3 {
     font-size: 1.25rem;
     line-height: 1.4em;
     margin: 0;
-    color: var(--text-light);
 }
 
 ul {
@@ -141,7 +136,6 @@ li, p, pre {
     line-height: 1.6em;
     font-size: 1.0rem;
     margin: 0;
-    color: var(--text-light);
 }
 
 p, pre {
@@ -152,12 +146,6 @@ li {
     list-style: none;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-    h1, h2, h3, li, p, pre {
-        color: var(--text-dark);
-    }
-}
-
 a {
     outline: none;
     text-decoration: underline;
@@ -166,55 +154,26 @@ a {
 }
 
 a:visited {
-    color: var(--visited-light);
-}
-
-@media screen and (prefers-color-scheme: dark) {
-    a {
-        color: var(--text-dark);
-    }
-
-    a:visited {
-        color: var(--visited-dark);
-    }
+    color: var(--visited);
 }
 
 a:focus, a:hover {
-    font-weight: bold;
-    color: var(--text-light);
-    text-decoration: underline var(--text-light) solid 4px;
-}
-
-@media screen and (prefers-color-scheme: dark) {
-    a:focus, a:hover {
-        color: var(--text-dark);
-        text-decoration: underline var(--text-dark) solid 4px;
-    }
+    color: var(--primary-500);
+    text-decoration: underline var(--primary-500) solid 3px;
 }
 
 a:focus:not(:focus-visible) {
-    font-weight: unset;
     color: unset;
     text-decoration: unset;
 }
 
 a:focus-visible {
-    font-weight: bold;
-    color: var(--text-light);
-    background-color: var(--focus);
-    outline: transparent solid 1px;
-    text-decoration: underline var(--text-light) solid 4px;
+    color: var(--text);
+    outline: var(--focus) solid 4px;
+    text-decoration: none;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-    a:focus-visible {
-        color: var(--text-dark);
-        background-color: unset;
-        outline: var(--focus) solid 2px;
-    }
-}
-
-a[href*="http"]:after {
+a[href*="http"]::after {
     content: url(assets/external-link.svg);
     display: inline-block;
     margin-left: 0.2em;
@@ -222,8 +181,8 @@ a[href*="http"]:after {
     height: 1em;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-    a[href*="http"]:after {
-        content: url(assets/external-link-white.svg);
-    }
+.horizontal-line {
+    background-color: var(--primary-500);
+    width: 91.6%;
+    height: 16px;
 }
