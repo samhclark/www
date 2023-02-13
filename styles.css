@@ -9,11 +9,11 @@
     --gray-200: #FBFBFB;
     --gray-100: #FFFFFF;
 
-    --primary-900: #07223C;
-    --primary-700: #104D87;
-    --primary-500: #1878D1;
-    --primary-300: #84BCF1;
-    --primary-100: #EDF5FD;
+    --primary-900: #091C15;
+    --primary-700: #174C37;
+    --primary-500: #298460;
+    --primary-300: #7ED7B4;
+    --primary-100: #EDF9F4;
 
     --background: var(--gray-100);
     --text: var(--gray-900);    
@@ -84,15 +84,8 @@ body {
 main {
     display: block;
     position: relative;
-    /* margin: 1rem; */
     padding: 1rem;
-    /* width: 100%; */
-}
-
-@media screen and (min-width: 400px) {
-    main {
-        width: 240px;
-    }
+    max-width: fit-content;
 }
 
 section {
@@ -188,7 +181,7 @@ a[href*="http"]::after {
 .horizontal-line {
     background-color: var(--primary-500);
     width: 100%;
-    height: 16px;
-    margin-top: 1rem;
+    height: 24px;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
