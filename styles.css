@@ -12,6 +12,7 @@
     --primary-900: #091C15;
     --primary-700: #174C37;
     --primary-500: #298460;
+    --primary-400: #3ABC88;
     --primary-300: #7ED7B4;
     --primary-100: #EDF9F4;
 
@@ -21,6 +22,8 @@
     --link: #3C48CD;
     --visited: #911BB1;
     --focus: #D16F19;
+
+    accent-color: var(--primary-500);
 }
 
 @font-face {
